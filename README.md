@@ -214,7 +214,7 @@ g++ main.cpp cJSON.c -o main<br>
 3. Run the executable:<br>
 ./main<br>
 4. Follow the on-screen menu to interact with the ATM Simulator.
-<br>
+<br><br>
 Future Improvements
 <br><br>
 • Add transaction history logs per account stored within JSON (timestamp, amount, type).
@@ -230,9 +230,10 @@ Future Improvements
 • Support concurrency for multiple simultaneous users.
 <br>
 • Implement a graphical user interface (GUI) version.
-<br>
+<br><br>
 Credits
 <br><br>
 • cJSON library used for JSON parsing and writing.
 <br>
+
 • Developed by [Your Name], 1st year CSE student.8
