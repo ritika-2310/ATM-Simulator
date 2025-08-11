@@ -11,7 +11,7 @@ This project demonstrates:
 - Use of ANSI color codes to improve user interface readability
 - Recursion and error handling for input and login attempts
 - Simple secure PIN management with uniqueness checks
-<br>
+<br><br>
 ## Features
 <br>
 - **Account Creation**: Automatically generates a unique 10-digit account number and allows users to create or generate a 4-digit PIN. User’s name and initial balance (0) are stored.
@@ -33,7 +33,7 @@ This project demonstrates:
 ---
 <br>
 ## Code Walkthrough & Function Descriptions
-<br>
+<br><br>
 ### Data Structure
 <br>
 ```cpp<br>
@@ -49,7 +49,7 @@ struct item {<br>
 };
 <br>
 Core Functions
-<br>
+<br><br>
 cJSON *read()
 <br><br>
 1. Opens and reads account.json.
@@ -59,7 +59,7 @@ cJSON *read()
 3. Handles cases where file is missing, empty, or JSON is malformed.
 <br>
 4. Returns NULL if no valid data is found.
-<br>
+<br><br>
 void saveToFile(item newitem)
 <br><br>
 1. Reads existing JSON data.
@@ -69,7 +69,7 @@ void saveToFile(item newitem)
 3. rites the updated JSON back to account.json.
 <br>
 4. Creates a new JSON array if file was empty or missing.
-<br>
+<br><br>
 void menu()
 <br><br>
 1. Displays the main menu with all options for user interaction.
@@ -81,21 +81,21 @@ Account Creation Functions
 long long generate_acc_no()
 <br><br>
 • Generates a random 10-digit account number (between 1000000000 and 9999999999).
-<br>
+<br><br>
 long long acc__no()
 <br><br>
 • Checks if the generated account number is unique by scanning existing accounts.
 <br>
 • Recursively generates new numbers if duplicates found.
-<br>
+<br><br>
 void pin_menu()
 <br><br>
 • Displays PIN creation options (manual or system-generated).
-<br>
+<br><br>
 bool check_pin(int pin)
 <br><br>
 • Validates PIN uniqueness across existing accounts.
-<br>
+<br><br>
 int own_pin()
 <br><br>
 • Allows the user to input their own 4-digit PIN.
@@ -103,17 +103,17 @@ int own_pin()
 • Validates length and uniqueness.
 <br>
 • Recurses until a valid PIN is provided.
-<br>
+<br><br>
 int generate_pin()
 <br><br>
 • Automatically generates a unique random 4-digit PIN.
 <br>
 • Ensures no duplicate PIN exists.
-<br>
+<br><br>
 int pin_enter()
 <br><br>
 • Manages PIN creation process by calling pin_menu() and delegating to either own_pin() or generate_pin().
-<br>
+<br><br>
 void acc_create()
 <br><br>
 • Combines above functions to create a new account.
@@ -129,16 +129,17 @@ void acc_create()
 • Displays the newly created account details (with masked PIN).
 <br>
 • Login System
+<br><br>
 void logging()
 <br><br>
 • Initializes login process with 3 allowed attempts.
-<br>
+<br><br>
 void enter_login(int* attempts)
 <br><br>
 vPrompts user for account number and PIN.
-<br>
+<br><br>
 • Passes data to login().
-<br>
+<br><br>
 int login(long long acc_no, int pin, int* attempts)
 <br><br>
 • Verifies account credentials against stored JSON data.
@@ -150,23 +151,23 @@ int login(long long acc_no, int pin, int* attempts)
 • Locks out after 3 failed attempts.
 <br>
 • Handles non-existent accounts.
-<br>
+<br><br>
 void display(long long acc_no)
 <br><br>
 • Shows account details: account number, name, masked PIN, and balance.
-<br>
+<br><br>
 Balance and Transactions
 <br><br>
 bool check_cred(long long acc_no, int pin)
 <br><br>
 • Validates account number and PIN combo.
-<br>
+<br><br>
 void balance()
 <br><br>
 • Prompts for account number and PIN.
 <br>
 • Shows current balance if credentials are valid.
-<br>
+<br><br>
 void withdraw()
 <br><br>
 • Authenticates user.
@@ -176,7 +177,7 @@ void withdraw()
 • Validates positive amount and sufficient funds.
 <br>
 • Updates and saves new balance.
-<br>
+<br><br>
 void deposit()
 <br><br>
 • Authenticates user.
@@ -188,7 +189,7 @@ void deposit()
 • Updates and saves new balance.
 <br>
 • User Interaction Loop
-<br>
+<br><br>
 void enter_choice()
 <br><br>
 • Shows menu.
@@ -198,13 +199,13 @@ void enter_choice()
 • Calls respective functions for account creation, login, withdraw, deposit, balance check, or exit.
 <br>
 • Validates input and reprompts if invalid.
-<br>
+<br><br>
 main()
 <br><br>
 • Runs a loop asking users if they want to continue after each transaction.
 <br>
 • Ends program on user command.
-<br>
+<br><br>
 How to Run
 <br>
 1. Make sure you have the cJSON library files (cJSON.h and cJSON.c) included and compiled with your project.
@@ -235,5 +236,6 @@ Credits
 <br><br>
 • cJSON library used for JSON parsing and writing.
 <br>
+<br>
+• Developed by Ritika Bhasin, IT student, IPU'28.
 
-• Developed by [Your Name], 1st year CSE student.8
