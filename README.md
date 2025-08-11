@@ -5,21 +5,33 @@
 This project is a Command Line Interface (CLI) based ATM Simulator implemented in C++. It mimics basic ATM banking functionalities such as account creation, login, balance inquiry, deposit, and withdrawal. The project uses the cJSON library to handle JSON file operations, allowing persistent storage of user accounts and their details in a JSON file named `account.json`.
 <br>
 This project demonstrates:
+<br>
 - Basic file handling in C++
+<br>
 - Working with JSON data structures using cJSON
+<br>
 - CLI interaction and user input validation
+<br>
 - Use of ANSI color codes to improve user interface readability
+<br>
 - Recursion and error handling for input and login attempts
+<br>
 - Simple secure PIN management with uniqueness checks
 <br><br>
 ## Features
 <br>
 - **Account Creation**: Automatically generates a unique 10-digit account number and allows users to create or generate a 4-digit PIN. User’s name and initial balance (0) are stored.
+<br>
 - **Login System**: Users can login using their account number and PIN with three attempts allowed before locking out.
+<br>
 - **Withdraw Money**: Secure withdrawal feature that validates PIN, checks sufficient balance, and updates the stored balance.
+<br>
 - **Deposit Money**: Secure deposit feature that validates PIN and updates the stored balance.
+<br>
 - **Check Balance**: Allows users to securely view their current balance.
+<br>
 - **Data Persistence**: All account information is stored and updated in a JSON file (`account.json`), ensuring data persists between program runs.
+<br>
 - **User-Friendly CLI**: Uses ANSI color codes for clear and colored terminal output.
 <br>
 ---
@@ -27,8 +39,11 @@ This project demonstrates:
 ## Files
 <br>
 - `main.cpp` : The main program file containing all the source code.
+<br>
 - `account.json` : JSON file storing user account data persistently (created automatically when accounts are made).
+<br>
 - `cJSON.h` and `cJSON.c` : The JSON parsing and writing library files (make sure to include these in your project).
+<br>
 <br>
 ---
 <br>
@@ -238,4 +253,5 @@ Credits
 <br>
 <br>
 • Developed by Ritika Bhasin, IT student, IPU'28.
+
 
