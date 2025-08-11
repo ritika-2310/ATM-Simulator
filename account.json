@@ -1,0 +1,16 @@
+[{
+		"account_number":	1000000041,
+		"name":	"Ritika Bhasin",
+		"pin":	1467,
+		"balance":	0
+	}, {
+		"account_number":	1000018467,
+		"name":	"Kanishka Bhasin",
+		"pin":	7334,
+		"balance":	0
+	}, {
+		"account_number":	1000026500,
+		"name":	"Babita Bhasin",
+		"pin":	1234,
+		"balance":	2000
+	}]
